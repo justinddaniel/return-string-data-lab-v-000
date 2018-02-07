@@ -1,7 +1,7 @@
 <h1> Products Display Page </h1>
 <ul>
 <% @products.each do |product| %>
-  <li>Name: <%= product.name %></li>
-  <li>Description: <%= product.description %></li><br>
+  <li><strong>Name:</strong> <%= product.name %></li>
+  <li><strong>Description:</strong>/ <%= product.description %></li><br>
 <% end %>
 </ul>
