@@ -20,6 +20,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  def body
+   product = Product.find(params[:id])
+   render plain: product.description
+  end
+
+  def available?
+    product = Product.find(params[:id])
+    available = product.inventory > 0 ? "true" : "false"
+    render plain: available
+
   private
 
   def product_params
