@@ -11,8 +11,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       redirect_to "/products/index"
-    else 
-      render :new 
+    else
+      render :new
     end
   end
 
