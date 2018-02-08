@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
     product = Product.find(params[:id])
     available = product.inventory > 0 ? "true" : "false"
     render plain: available
+  end
 
   private
 
