@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
   end
 
   def available
+    binding.pry
     product = Product.find(params[:id])
     available = product.inventory > 0 ? "true" : "false"
     render plain: available
