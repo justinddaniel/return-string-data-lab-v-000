@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :products
   get 'products/:id/body', to: 'products#body'
-  get 'products/:id/available?', to: 'products#available?'
+  get 'products/:id/available', to: 'products#available'
   resources :orders
   resources :invoices
 
